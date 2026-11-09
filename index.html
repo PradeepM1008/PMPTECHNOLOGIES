@@ -104,6 +104,9 @@ header.sc{background:rgba(6,10,26,.88);backdrop-filter:blur(14px);border-bottom:
 .acad ul li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid var(--line)}
 .acad ul li:before{content:"✓";position:absolute;left:0;top:10px;width:22px;height:22px;border-radius:50%;background:var(--g);color:#fff;font-size:.75rem;display:grid;place-items:center}
 .acad li b{color:var(--ink)}
+.ch{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:38px}
+.ch span{padding:8px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:.88rem;color:var(--ink)}
+.cc .tg{display:inline-block;font-size:.74rem;font-weight:700;color:var(--v);background:rgba(124,92,255,.1);padding:4px 12px;border-radius:999px;margin-bottom:14px}
 /* projects */
 .pj{padding:0}.pj img{width:100%;height:190px;object-fit:cover;display:block;background:linear-gradient(135deg,#dcd6ff,#c7f3fb);transition:transform .6s}
 .pj .im{overflow:hidden}.pj:hover img{transform:scale(1.08)}.pj .in{padding:24px}
@@ -163,6 +166,8 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
 <symbol id="i-ux" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2-.6-1.2.2-2.5 1.6-2.5H17a4 4 0 0 0 4-4C21 6.5 17 3 12 3Z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="11" r="1"/></symbol>
 <symbol id="i-crm" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 2.9-6 6.5-6s6.5 2.5 6.5 6M17 4.5a3.5 3.5 0 0 1 0 7M18.5 14.3c2 .7 3 2.6 3 5.7"/></symbol>
 <symbol id="i-ai" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3M9.5 14.5l2.5-5 2.5 5M10.3 13h3.4"/></symbol>
+<symbol id="i-data" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+<symbol id="i-ml" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 6.5l3.2 4M7 17.5l3.2-4M14 11l3.3-3.6M14 13l3.3 3.6"/></symbol>
 <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
 <symbol id="i-tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
 <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
@@ -172,7 +177,7 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
  <a href="#home" class="logo"><img src="logo1.jpeg" alt="PMP Technologies logo" onerror="this.style.display='none'">PMP Technologies</a>
  <button class="burger" id="bg" aria-label="Menu">☰</button>
  <nav class="links" id="lk">
-  <a href="#services">Services</a><a href="#process">Process</a><a href="#academy">Training</a><a href="#projects">Projects</a><a href="#faq">FAQ</a>
+  <a href="#services">Services</a><a href="#process">Process</a><a href="#academy">Courses</a><a href="#projects">Projects</a><a href="#faq">FAQ</a>
   <button class="fb" id="fo">Meet the Founder</button>
   <a href="#contact" class="cta">Start a Project</a>
  </nav>
@@ -243,10 +248,17 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
  </div>
 </div></section>
 
-<section id="academy" class="soft"><div class="wrap acad">
- <div class="rv"><div class="sh" style="margin:0"><h2>Learn to build real software</h2><p>Alongside client work, we train students through practical, project-based programs, so you leave with skills and a portfolio, not just certificates.</p></div>
-  <a href="#contact" class="btn bd" style="margin-top:26px">Talk to an advisor</a></div>
- <ul class="rv"><li><b>Full Stack Web Development:</b> HTML, CSS, JavaScript, React, Node.js</li><li><b>Python & JavaScript Engineering:</b> from basics to real apps</li><li><b>Real Capstone Projects:</b> login, databases, APIs and live deployment</li><li><b>Portfolio & Career Guidance:</b> GitHub profile, live links, interview prep</li></ul>
+<section id="academy" class="soft"><div class="wrap">
+ <div class="sh c rv"><h2>Learn in-demand tech skills with PMP Technologies</h2><p>Practical, project-based courses taught by working developers. Build real projects, publish your portfolio and get ready for a tech career.</p></div>
+ <div class="ch rv"><span>Project-based learning</span><span>Hands-on labs</span><span>Portfolio & GitHub</span><span>Career guidance</span></div>
+ <div class="grid g3">
+  <div class="card cc rv"><span class="tg">Core AI</span><div class="ic"><svg><use href="#i-ai"/></svg></div><h3>Artificial Intelligence</h3><p>Understand how modern AI works and build real AI-powered solutions.</p><ul><li>AI fundamentals & neural networks</li><li>NLP, chatbots & computer vision</li><li>Prompt engineering & LLM apps</li></ul></div>
+  <div class="card cc rv"><span class="tg">Core AI</span><div class="ic"><svg><use href="#i-ml"/></svg></div><h3>Machine Learning</h3><p>Train models that learn from data, evaluate them properly and put them to work.</p><ul><li>Supervised & unsupervised learning</li><li>Python, scikit-learn & model tuning</li><li>Deploying ML models as APIs</li></ul></div>
+  <div class="card cc rv"><span class="tg">Data</span><div class="ic"><svg><use href="#i-data"/></svg></div><h3>Data Science</h3><p>Turn raw data into clear insights and decisions with the tools professionals use.</p><ul><li>Python, NumPy & Pandas</li><li>Statistics, SQL & visualization</li><li>Dashboards & storytelling with data</li></ul></div>
+  <div class="card cc rv"><span class="tg">Most practical</span><div class="ic"><svg><use href="#i-app"/></svg></div><h3>AI-Powered Full Stack Development</h3><p>Build complete web apps from front end to database, with AI features built in.</p><ul><li>React, Node.js & databases</li><li>AI APIs, chatbots & automation</li><li>Authentication & live deployment</li></ul></div>
+  <div class="card cc rv"><span class="tg">Foundation</span><div class="ic"><svg><use href="#i-code"/></svg></div><h3>Software Development</h3><p>Strong programming foundations to start a career as a professional software developer.</p><ul><li>Programming, OOP & problem solving</li><li>Data structures, Git & testing</li><li>APIs and real project work</li></ul></div>
+  <div class="card cta rv"><h3>Ready to start learning?</h3><p>Ask us about course duration, fees and upcoming batches.</p><a href="#contact" class="btn bp">Enquire about courses</a></div>
+ </div>
 </div></section>
 
 <section><div class="wrap">
@@ -293,7 +305,8 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
   <details><summary>Can you build a CRM or ERP for my business?</summary><p>Yes. We build CRM and ERP systems around your process: leads, sales, inventory, billing, HR and reports.</p></details>
   <details><summary>How can AI help my business?</summary><p>We add AI chatbots, automation, document processing and smart insights to your website or software to save time and cost.</p></details>
   <details><summary>Can I discuss my project before committing?</summary><p>Yes. Send us an enquiry and we'll discuss scope, timeline and cost with no obligation.</p></details>
-  <details><summary>Do you offer training for students?</summary><p>Yes. We run project-based programs in full stack development, Python and JavaScript with portfolio guidance.</p></details>
+  <details><summary>Which courses do you offer for students?</summary><p>Artificial Intelligence, Machine Learning, Data Science, AI-Powered Full Stack Development and Software Development, all project-based with portfolio and career guidance.</p></details>
+  <details><summary>What are the course fees and batch dates?</summary><p>Fees, duration and upcoming batches depend on the course. Send us an enquiry or call +91 85248 32555 and we will share the details.</p></details>
  </div>
 </div></section>
 
@@ -308,7 +321,7 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
   <div><a href="#home" class="logo" style="margin-bottom:12px"><img src="logo1.jpeg" alt="" onerror="this.style.display='none'">PMP Technologies</a><p>Websites, apps, CRM & ERP and AI software for growing businesses.</p></div>
   <div><h4 style="color:#fff">Company</h4><ul><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
   <div><h4 style="color:#fff">Services</h4><ul><li>Web & mobile apps</li><li>CRM & ERP</li><li>AI integration</li></ul></div>
-  <div><h4 style="color:#fff">Training</h4><ul><li>Full stack development</li><li>Project training</li></ul></div>
+  <div><h4 style="color:#fff">Courses</h4><ul><li>Artificial Intelligence</li><li>Machine Learning</li><li>Data Science</li><li>AI Full Stack</li><li>Software Development</li></ul></div>
  </div>
  <div class="cp"><span>© 2026 PMP Technologies. All rights reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms & Conditions</a></span></div>
 </div></footer>
