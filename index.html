@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>PMP Technologies — Web, Mobile, CRM/ERP & AI Software Development</title>
 <meta name="description" content="PMP Technologies builds websites, mobile apps, web applications, custom software, CRM & ERP systems and AI integrations for growing businesses. Mayiladuthurai, Tamil Nadu.">
 <link rel="icon" href="logo1.jpeg">
@@ -12,6 +12,7 @@
 :root{--bg:#060A1A;--bg2:#0C1230;--lt:#F5F7FF;--ink:#0B1030;--tx:#38405F;--mut:#6B7396;--line:#E3E7F6;--v:#7C5CFF;--c:#22D3EE;--g:linear-gradient(120deg,#7C5CFF,#22D3EE);--r:18px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
+html,body{overflow-x:hidden}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#fff;color:var(--tx);line-height:1.7}
 h1,h2,h3,h4{font-family:Sora,sans-serif;color:var(--ink);line-height:1.18}
 a{color:inherit;text-decoration:none}ul{list-style:none}
@@ -35,12 +36,12 @@ header.sc{background:rgba(6,10,26,.88);backdrop-filter:blur(14px);border-bottom:
 .logo{display:flex;align-items:center;gap:10px;color:#fff;font:700 1.1rem Sora}
 .logo img{width:38px;height:38px;border-radius:10px;object-fit:cover;background:#fff}
 .links{display:flex;gap:6px;align-items:center}
+.mcta{display:none}
 .links a,.links button{color:#c4cae8;font:500 .9rem 'Plus Jakarta Sans';padding:8px 12px;border-radius:999px;background:none;border:0;cursor:pointer;transition:.2s}
 .links a:hover,.links button:hover{color:#fff;background:rgba(255,255,255,.08)}
 .links .fb{border:1.5px solid rgba(255,255,255,.25);color:#fff;margin-left:6px}
 .links .fb:hover{border-color:var(--c);color:var(--c);background:none}
 .links .cta{background:var(--g);color:#fff;font-weight:700;padding:10px 20px;margin-left:4px}
-.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
 /* hero */
 .hero{background:var(--bg);color:#fff;padding:150px 0 100px;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(124,92,255,.38),transparent 45%),radial-gradient(circle at 10% 90%,rgba(34,211,238,.22),transparent 40%);animation:bgm 14s ease-in-out infinite alternate}
@@ -138,10 +139,10 @@ footer{background:#040716;color:#8791c4;padding:60px 0 24px;font-size:.92rem}
 dialog{border:0;border-radius:24px;max-width:760px;width:calc(100% - 32px);margin:auto;padding:0;overflow:hidden;box-shadow:0 50px 100px -20px rgba(0,0,0,.7)}
 dialog::backdrop{background:rgba(6,10,26,.7);backdrop-filter:blur(6px)}
 dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.94)}}
-.fm{display:grid;grid-template-columns:260px 1fr}
-.fm .ph{background:var(--g);display:grid;place-items:center;min-height:300px;position:relative}
-.fm img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.fm .ph span{font:800 4rem Sora;color:#fff}
+.fm{display:grid;grid-template-columns:300px 1fr}
+.fm .ph{background:var(--g);display:flex;align-items:center;justify-content:center;padding:30px 26px}
+.fm img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 15%;border-radius:18px;border:3px solid rgba(255,255,255,.75);box-shadow:0 20px 40px -14px rgba(0,0,0,.5)}
+.fm .ph span{font:800 4rem Sora;color:#fff;display:none}
 .fm .tx{padding:38px 34px;background:#fff}
 .fm blockquote{margin:16px 0 0;padding-left:16px;border-left:4px solid var(--v);color:var(--tx)}
 .x{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;border:0;background:rgba(11,16,48,.08);font-size:1.3rem;cursor:pointer;z-index:2}
@@ -151,9 +152,40 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
 .hero .wrap,.ct,.acad{grid-template-columns:1fr}.mock{max-width:480px;margin:20px auto 0}
 .g4,.steps,.fg{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}
 .sg{grid-template-columns:repeat(2,1fr)}.st:nth-child(2){border-right:0}.st:nth-child(-n+2){border-bottom:1px solid var(--line)}
-.burger{display:block}.links{position:absolute;top:72px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;padding:18px;display:none;text-align:center}.links.open{display:flex}
-.fm{grid-template-columns:1fr}.fm .ph{min-height:240px}}
+.fm{grid-template-columns:1fr}}
 @media(max-width:620px){section{padding:68px 0}.g4,.g3,.g2,.steps,.fg{grid-template-columns:1fr}.fc.b{left:-6px}.fc.a{right:-4px}}
+/* mobile */
+@media(max-width:960px){
+html{scroll-padding-top:128px}
+.nav{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px;row-gap:4px}
+header{background:rgba(6,10,26,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.mcta{display:inline-block!important;order:2;background:var(--g);color:#fff;font:700 .84rem 'Plus Jakarta Sans';padding:9px 16px;border-radius:999px;white-space:nowrap}
+.logo{order:1;margin-right:auto}
+.links{order:3;width:100%;flex-wrap:wrap;justify-content:center;gap:2px 4px;padding-bottom:2px}
+.links .cta{display:none}
+.links a,.links button{font-size:.84rem;padding:6px 12px}
+.links .fb{margin-left:0}
+.hero{padding:170px 0 90px}
+.mock{padding:0 12px}
+.fm{max-height:calc(100vh - 32px);overflow-y:auto}
+.fm .ph{padding:34px 0 22px}
+.fm img{width:170px;height:170px;aspect-ratio:1/1;border-radius:50%;object-position:center 12%}
+.fm .tx{text-align:center}.fm blockquote{text-align:left}
+.fm .tx{padding:26px 22px 30px}
+.x{background:rgba(255,255,255,.92)}
+}
+@media(max-width:620px){
+section{padding:56px 0}.wrap{padding:0 18px}
+.hero h1{font-size:2.15rem}.hero p{font-size:1rem}
+.row .btn{flex:1;justify-content:center;text-align:center}
+.fc.a{right:0}.fc.b{left:0}.fc.d{right:20px}.fc{font-size:.75rem;padding:8px 12px}
+.st{padding:20px 10px}.st b{font-size:1.7rem}
+.card{padding:24px 20px}
+form{padding:24px 20px}
+.sh{margin-bottom:32px}.sh h2{font-size:1.75rem}
+.cp{flex-direction:column;text-align:center}
+.wa{right:14px;bottom:14px;width:52px;height:52px}
+}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -175,7 +207,7 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
 
 <header id="hd"><div class="wrap nav">
  <a href="#home" class="logo"><img src="logo1.jpeg" alt="PMP Technologies logo" onerror="this.style.display='none'">PMP Technologies</a>
- <button class="burger" id="bg" aria-label="Menu">☰</button>
+ <a href="#contact" class="mcta">Start a Project</a>
  <nav class="links" id="lk">
   <a href="#services">Services</a><a href="#process">Process</a><a href="#academy">Courses</a><a href="#projects">Projects</a><a href="#faq">FAQ</a>
   <button class="fb" id="fo">Meet the Founder</button>
@@ -331,7 +363,7 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
 <dialog id="fd" aria-label="Founder">
  <button class="x" id="fx" aria-label="Close">×</button>
  <div class="fm">
-  <div class="ph"><span>MP</span><img src="pradeep.jpeg" alt="M Pradeep, Founder and CEO" onerror="this.remove()"></div>
+  <div class="ph"><img src="pradeep.jpeg" alt="M Pradeep, Founder and CEO" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span>MP</span></div>
   <div class="tx"><span class="lb">Meet the Founder</span><h2 style="font-size:1.9rem">M Pradeep</h2><p style="color:var(--mut);font-weight:600">Founder & CEO, PMP Technologies</p>
    <blockquote>PMP Technologies was founded with one mission: to bridge the gap between complex challenges and smart, scalable tech solutions. We focus on future-ready products and a culture of continuous innovation and excellence.</blockquote>
    <a href="#contact" class="btn bp" id="fc" style="margin-top:24px">Talk to us</a></div>
@@ -341,8 +373,6 @@ dialog[open]{animation:pop .45s cubic-bezier(.2,.9,.3,1.2)}@keyframes pop{from{o
 <script>
 const $=s=>document.querySelector(s),hd=$('#hd');
 addEventListener('scroll',()=>hd.classList.toggle('sc',scrollY>30));
-$('#bg').onclick=()=>$('#lk').classList.toggle('open');
-document.querySelectorAll('#lk a,#lk button').forEach(a=>a.addEventListener('click',()=>$('#lk').classList.remove('open')));
 const t=['Python','JavaScript','TypeScript','React','Next.js','Node.js','Flutter','React Native','PostgreSQL','Docker','AWS','REST APIs','OpenAI & AI APIs','Git & GitHub'];
 $('#mq').innerHTML=[...t,...t].map(x=>`<span>${x}</span>`).join('');
 // founder modal
